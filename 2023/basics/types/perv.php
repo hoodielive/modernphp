@@ -7,7 +7,7 @@ class mc
     array_walk($arr, array($this, "walkIt"));
   }
 
-  public function walkIt($val)
+  public function walkIt($val): string
   {
     echo $val . "<br />";
   }
@@ -22,5 +22,6 @@ $data = array(1, 2, 3, 4, 5);
 
 $m = new mc;
 $m->go($data); 
+$m->walkIt("Jesus");
 
 array_walk($data, $m->export());
